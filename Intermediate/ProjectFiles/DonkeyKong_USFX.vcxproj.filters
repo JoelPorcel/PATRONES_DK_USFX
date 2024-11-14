@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\DonkeyKong_USFX.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{9FBDBB7A-898D-4DA3-A8F3-B7A3D157E372}</UniqueIdentifier>
+      <UniqueIdentifier>{134A9873-72D4-4810-BE44-68B1E005EC74}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\DonkeyKong_USFX.Target.cs">
       <Filter>Source</Filter>
@@ -11,9 +11,8 @@
     <None Include="..\..\Source\DonkeyKong_USFXEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
-    <None Include="..\..\DonkeyKong_USFX.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{EAEF2380-DE34-4F79-8C5E-DF0BECB715B1}</UniqueIdentifier>
+      <UniqueIdentifier>{B0A68F9D-B6EA-4A50-A842-2B6D4D9EFAA4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\DonkeyKong_USFX">
-      <UniqueIdentifier>{3F8FE3CB-41AE-4C09-8995-F09409046AB4}</UniqueIdentifier>
+      <UniqueIdentifier>{BB0940DC-522A-47BF-BA03-3D29FADB2EA8}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\DonkeyKong_USFX\AdaptadorProyectil.cpp">
       <Filter>Source\DonkeyKong_USFX</Filter>

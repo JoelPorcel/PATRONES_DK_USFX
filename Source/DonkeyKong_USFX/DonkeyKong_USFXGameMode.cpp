@@ -98,24 +98,24 @@ void ADonkeyKong_USFXGameMode::BeginPlay()
 
 
 	//strategy
-	/*zigzag = GetWorld()->SpawnActor<AEstrategiaZigzag>(AEstrategiaZigzag::StaticClass());
+	zigzag = GetWorld()->SpawnActor<AEstrategiaZigzag>(AEstrategiaZigzag::StaticClass());
 	senoidal = GetWorld()->SpawnActor<AEstrategiaSenoidal>(AEstrategiaSenoidal::StaticClass());
 	gargolaEstrategy = GetWorld()->SpawnActor<AEnemigoGargola>(AEnemigoGargola::StaticClass(), FVector(1550, -1210, 700), FRotator::ZeroRotator);
 	gargolaEstrategy->AlterarManiobras(zigzag);
-	gargolaEstrategy->Emplear();*/
+	gargolaEstrategy->Emplear();
 }
 
 void ADonkeyKong_USFXGameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	segundos += DeltaTime;
-	if (segundos >= 10 && segundos <=10.01) {
+	if (segundos >= 20 && segundos <=20.01) {
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Cambio con el FACADEEEEE")));
 		//UGameplayStatics::OpenLevel(GetWorld(), FName("nivel2"));
 		//segundos = 0;
 		//Facade->vigilar();
 		torre->FijarLaHoraDelDia("Dia");
-		//gargolaEstrategy->AlterarManiobras(senoidal);
+		gargolaEstrategy->AlterarManiobras(senoidal);
 	}
 	if (segundos >= 20 && segundos <= 20.01) torre->FijarLaHoraDelDia("Noche");
 	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Cambio de nivel")));

@@ -7,11 +7,7 @@
 		{
 			"Name": "DonkeyKong_USFX",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine",
-				"AIModule"
-			]
+			"LoadingPhase": "Default"
 		}
 	]
 }

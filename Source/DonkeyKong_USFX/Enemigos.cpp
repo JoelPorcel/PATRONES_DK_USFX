@@ -82,8 +82,7 @@ void AEnemigos::AlterarManiobras(AActor* _EstrategiaDeBatalla)
 void AEnemigos::Emplear()
 {
 	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Emplear"));
-	if (Estrategia)
-	{
+	if (Estrategia) {
 		Estrategia->Movimiento();
 		GetWorld()->GetTimerManager().SetTimer(mover, this, &AEnemigos::Emplear, 0.009f, true);
 	}

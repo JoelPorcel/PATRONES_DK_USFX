@@ -12,7 +12,7 @@ ABarrilSaltador::ABarrilSaltador()
 	PrimaryActorTick.bCanEverTick = true;
 
 	//establece el componenete raiz de la malla
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> Barril(TEXT("StaticMesh'/Game/Geometry/Meshes/BarrilSaltador.BarrilSaltador'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> Barril(TEXT("StaticMesh'/Game/Barriles/Wooden_Barrel_1018213712.Wooden_Barrel_1018213712'"));
 	// Crear el componente de malla est?tica
 	//Mallas de la clase
 	BarrilMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Malla_Barrilmovimiento"));

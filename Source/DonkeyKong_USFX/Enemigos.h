@@ -42,7 +42,7 @@ protected:
 
 
 	//patron strategy
-	class IIEstrategiaMovimiento* Estrategia;
+	IIEstrategiaMovimiento* Estrategia;
 	FTimerHandle mover;
 public:	
 	// Called every frame
