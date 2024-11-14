@@ -29,7 +29,6 @@ public:
 	TArray<AEnemigos*> Enemigos;
 	TMap<int, APlataforma*> Posicion;
 	AEnemigos* Enemigo;
-
 	
 
 	void spawn(FString _enemigo, int _cantidad,TMap<int, APlataforma*> _Posicion);

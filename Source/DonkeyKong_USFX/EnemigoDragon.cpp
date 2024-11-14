@@ -137,16 +137,14 @@ void AEnemigoDragon::Transformar()
     if (TorreDelReloj->ObtenerTiempo() == "Noche")
     {
         GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Noche te atacannnnnn"));
-        observer = true;
         PosicionInicial = GetActorLocation();
         LimiteInicial = PosicionInicial + FVector(0, 2000, 0);
         LimiteFinal = PosicionInicial + FVector(0, -2000, 0);
-        GetWorld()->GetTimerManager().SetTimer(observar, this, &AEnemigoDragon::vigilar, 0.009f, observer);
+        GetWorld()->GetTimerManager().SetTimer(observar, this, &AEnemigoDragon::vigilar, 0.009f, true);
     }
     else if (TorreDelReloj->ObtenerTiempo() == "Dia")
     {
-        observer = false;
-        GetWorld()->GetTimerManager().SetTimer(observar, this, &AEnemigoDragon::atacar, 0.009f, !observer);
+        GetWorld()->GetTimerManager().SetTimer(observar, this, &AEnemigoDragon::atacar, 0.009f, true);
     }
 }
 

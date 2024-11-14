@@ -32,14 +32,14 @@ void AAdaptadorProyectil::Tick(float DeltaTime)
 void AAdaptadorProyectil::LanzarProyectil()
 {
 	if (Mario) {
-		FVector SpawnLocation = Mario->GetActorLocation() + Mario->GetActorForwardVector() * 100;
+		FVector SpawnLocation = Mario->GetActorLocation() + Mario->GetActorForwardVector() * 600;
 		FRotator SpawnRotation = Mario->GetActorRotation();
 		FVector ForwardDirection = Mario->GetActorForwardVector();
-		if (ForwardDirection.Y >= 0.99 && Proyectil) {
-			Proyectil->locationProyectil(SpawnLocation, SpawnRotation, ForwardDirection);
+		if (ForwardDirection.Y >= 0.99) {
+			if(Proyectil) Proyectil->locationProyectil(SpawnLocation, SpawnRotation, ForwardDirection);
 		}
-		else if (ForwardDirection.Y <= -0.99 && Proyectil) {
-			Proyectil->locationProyectil(SpawnLocation, SpawnRotation, ForwardDirection);
+		else if (ForwardDirection.Y <= -0.99) {
+			if (Proyectil) Proyectil->locationProyectil(SpawnLocation, SpawnRotation, ForwardDirection);
 		}
 	}
 }

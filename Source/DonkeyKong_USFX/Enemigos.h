@@ -38,7 +38,6 @@ protected:
 
 	//patron observer
 	class ATorreTiempo* TorreDelReloj;
-	bool observer;
 	FTimerHandle observar;
 
 

@@ -63,6 +63,9 @@ protected:
 	class AEnemigoDragon* dragonEstrategy;
 	class AEnemigoGargola* gargolaEstrategy;
 
+
+	class ADonkeyKong_USFXCharacter* Player2;
+
 };
 
 

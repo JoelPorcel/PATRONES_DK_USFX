@@ -60,7 +60,7 @@ void AProyectil::Initialize(const FVector& Direction)
 
 void AProyectil::locationProyectil(FVector locacion, FRotator _rotacion, FVector direccion)
 {
-	AProyectil* SpawnedProjectile1 = GetWorld()->SpawnActor<AProyectil>(AProyectil::StaticClass(), locacion, _rotacion);
+	SpawnedProjectile1 = GetWorld()->SpawnActor<AProyectil>(AProyectil::StaticClass(), locacion, _rotacion);
 	if (SpawnedProjectile1) {
 		SpawnedProjectile1->Initialize(direccion);
 	}

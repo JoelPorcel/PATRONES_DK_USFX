@@ -54,4 +54,5 @@ public:
 
 
 	float vidaUtil;
+	AProyectil* SpawnedProjectile1;
 };

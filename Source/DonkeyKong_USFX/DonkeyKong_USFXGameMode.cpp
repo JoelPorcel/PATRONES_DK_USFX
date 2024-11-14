@@ -65,8 +65,6 @@ void ADonkeyKong_USFXGameMode::BeginPlay()
 	Facade = GetWorld()->SpawnActor<AEnemigosFacade>(AEnemigosFacade::StaticClass());
 	Facade->spawn("ave", 3, PosicionMapa);
 	Facade->spawn("dragon", 3, PosicionMapa);
-	Facade->spawn("gargola", 2, PosicionMapa);
-	Facade->spawn("ave", 3, PosicionMapa);
 
 	//decorator
 	APawn* Player1 = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
@@ -84,13 +82,15 @@ void ADonkeyKong_USFXGameMode::BeginPlay()
 
 	//adapter
 	AAdaptadorProyectil* adaptador = GetWorld()->SpawnActor<AAdaptadorProyectil>(AAdaptadorProyectil::StaticClass());
-	ADonkeyKong_USFXCharacter* Player2 = Cast<ADonkeyKong_USFXCharacter>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
+	Player2 = Cast<ADonkeyKong_USFXCharacter>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
 	Player2->setAdaptar(adaptador);
 
 
 	//Observer
 	torre = GetWorld()->SpawnActor<ATorreTiempo>(ATorreTiempo::StaticClass());
 	dragonObserver = GetWorld()->SpawnActor<AEnemigoDragon>(AEnemigoDragon::StaticClass(), FVector(1550, -1210, 450), FRotator::ZeroRotator);
+	gargolaObserver = GetWorld()->SpawnActor<AEnemigoGargola>(AEnemigoGargola::StaticClass(), FVector(1550, 1210, 700), FRotator::ZeroRotator);
+	gargolaObserver->EstablecerTorreDelReloj(torre);
 	dragonObserver->EstablecerTorreDelReloj(torre);
 	torre->FijarLaHoraDelDia("Noche");
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Hora del dia: %s"), *torre->ObtenerTiempo()));
@@ -98,11 +98,11 @@ void ADonkeyKong_USFXGameMode::BeginPlay()
 
 
 	//strategy
-	zigzag = GetWorld()->SpawnActor<AEstrategiaZigzag>(AEstrategiaZigzag::StaticClass());
+	/*zigzag = GetWorld()->SpawnActor<AEstrategiaZigzag>(AEstrategiaZigzag::StaticClass());
 	senoidal = GetWorld()->SpawnActor<AEstrategiaSenoidal>(AEstrategiaSenoidal::StaticClass());
 	gargolaEstrategy = GetWorld()->SpawnActor<AEnemigoGargola>(AEnemigoGargola::StaticClass(), FVector(1550, -1210, 700), FRotator::ZeroRotator);
 	gargolaEstrategy->AlterarManiobras(zigzag);
-	gargolaEstrategy->Emplear();
+	gargolaEstrategy->Emplear();*/
 }
 
 void ADonkeyKong_USFXGameMode::Tick(float DeltaTime)
@@ -110,12 +110,13 @@ void ADonkeyKong_USFXGameMode::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	segundos += DeltaTime;
 	if (segundos >= 10 && segundos <=10.01) {
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Cambio con el FACADEEEEE")));
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Cambio con el FACADEEEEE")));
 		//UGameplayStatics::OpenLevel(GetWorld(), FName("nivel2"));
 		//segundos = 0;
-		Facade->vigilar();
+		//Facade->vigilar();
 		torre->FijarLaHoraDelDia("Dia");
-		gargolaEstrategy->AlterarManiobras(senoidal);
+		//gargolaEstrategy->AlterarManiobras(senoidal);
 	}
+	if (segundos >= 20 && segundos <= 20.01) torre->FijarLaHoraDelDia("Noche");
 	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Cambio de nivel")));
 }

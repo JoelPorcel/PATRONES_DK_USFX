@@ -42,7 +42,7 @@ public:
 	void spawn(TMap<int, APlataforma*> _Posicion) override;
 
 	//patron observer
-	void  Actualizar() override;
+	void Actualizar() override;
 	void Transformar() override;
 	void cancelar();
 };

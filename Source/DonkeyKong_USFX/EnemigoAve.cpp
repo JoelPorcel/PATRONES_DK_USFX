@@ -138,16 +138,14 @@ void AEnemigoAve::Transformar()
 	if (TorreDelReloj->ObtenerTiempo() == "Noche")
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Noche te atacannnnnn"));
-        observer = true;
         PosicionInicial = GetActorLocation();
         LimiteInicial = PosicionInicial + FVector(0.f, 2000.f, 0.f);
         LimiteFinal = PosicionInicial + FVector(0.f, -2000, 0.f);
-		GetWorld()->GetTimerManager().SetTimer(observar, this, &AEnemigoAve::vigilar, 0.009f, observer);
+		GetWorld()->GetTimerManager().SetTimer(observar, this, &AEnemigoAve::vigilar, 0.009f, true);
 	} 
     else if(TorreDelReloj->ObtenerTiempo() == "Dia")
 	{
-        observer = false;
-		GetWorld()->GetTimerManager().SetTimer(observar, this, &AEnemigoAve::atacar, 0.009f, !observer);
+		GetWorld()->GetTimerManager().SetTimer(observar, this, &AEnemigoAve::atacar, 0.009f, true);
 	}
 }
 
