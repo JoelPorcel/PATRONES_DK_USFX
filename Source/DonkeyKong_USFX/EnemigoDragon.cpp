@@ -6,6 +6,8 @@
 #include "Kismet/GameplayStatics.h"
 #include "TorreTiempo.h"
 #include "Publicador.h"
+#include "StateAgresivo.h"
+#include "StatePasivo.h"
 
 // Sets default values
 AEnemigoDragon::AEnemigoDragon()
@@ -151,4 +153,32 @@ void AEnemigoDragon::Transformar()
 void AEnemigoDragon::cancelar()
 {
     TorreDelReloj->CancelarSuscripcion(this);
+}
+
+
+// state
+void AEnemigoDragon::InicializarEnemigo(int _energia)
+{
+	energia = _energia;
+	EstadoPasivo = GetWorld()->SpawnActor<AStatePasivo>(AStatePasivo::StaticClass());
+	EstadoPasivo->SetEnemigo(this);
+	EstadoAgresivo = GetWorld()->SpawnActor<AStateAgresivo>(AStateAgresivo::StaticClass());
+	EstadoAgresivo->SetEnemigo(this);
+	energia>=35 ? Estado = EstadoAgresivo : Estado = EstadoPasivo;
+}
+
+void AEnemigoDragon::EstablecerEstado(IIState* _estado)
+{
+	Estado = _estado;
+	Ataque();
+}
+
+void AEnemigoDragon::Ataque()
+{
+	if(Estado) Estado->atacar();
+}
+
+void AEnemigoDragon::Moverse()
+{
+	if(Estado) Estado->moverse();
 }

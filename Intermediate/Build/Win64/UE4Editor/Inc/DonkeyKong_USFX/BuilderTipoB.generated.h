@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define DONKEYKONG_USFX_BuilderTipoB_generated_h
 
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_SPARSE_DATA
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_RPC_WRAPPERS
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_RPC_WRAPPERS_NO_PURE_DECLS
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_INCLASS_NO_PURE_DECLS \
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_SPARSE_DATA
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_RPC_WRAPPERS
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABuilderTipoB(); \
 	friend struct Z_Construct_UClass_ABuilderTipoB_Statics; \
@@ -26,7 +26,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ABuilderTipoB*>(this); }
 
 
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_INCLASS \
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesABuilderTipoB(); \
 	friend struct Z_Construct_UClass_ABuilderTipoB_Statics; \
@@ -36,7 +36,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ABuilderTipoB*>(this); }
 
 
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_STANDARD_CONSTRUCTORS \
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABuilderTipoB(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABuilderTipoB) \
@@ -49,7 +49,7 @@ private: \
 public:
 
 
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_ENHANCED_CONSTRUCTORS \
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABuilderTipoB(ABuilderTipoB&&); \
@@ -60,31 +60,31 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABuilderTipoB)
 
 
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_PRIVATE_PROPERTY_OFFSET \
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Escenario() { return STRUCT_OFFSET(ABuilderTipoB, Escenario); }
 
 
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_13_PROLOG
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_GENERATED_BODY_LEGACY \
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_13_PROLOG
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_PRIVATE_PROPERTY_OFFSET \
-	STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_SPARSE_DATA \
-	STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_RPC_WRAPPERS \
-	STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_INCLASS \
-	STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_STANDARD_CONSTRUCTORS \
+	DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_PRIVATE_PROPERTY_OFFSET \
+	DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_SPARSE_DATA \
+	DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_RPC_WRAPPERS \
+	DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_INCLASS \
+	DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_GENERATED_BODY \
+#define DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_PRIVATE_PROPERTY_OFFSET \
-	STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_SPARSE_DATA \
-	STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_INCLASS_NO_PURE_DECLS \
-	STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h_16_ENHANCED_CONSTRUCTORS \
+	DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_PRIVATE_PROPERTY_OFFSET \
+	DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_SPARSE_DATA \
+	DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_INCLASS_NO_PURE_DECLS \
+	DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -92,7 +92,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> DONKEYKONG_USFX_API UClass* StaticClass<class ABuilderTipoB>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID STRATEGY_Source_DonkeyKong_USFX_BuilderTipoB_h
+#define CURRENT_FILE_ID DonkeyKong_USFX_Source_DonkeyKong_USFX_BuilderTipoB_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -7,6 +7,7 @@
 #include "DonkeyKong_USFXCharacter.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Muro.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 
 // Sets default values
 ABarrilExplosivo::ABarrilExplosivo()
@@ -66,10 +67,10 @@ void ABarrilExplosivo::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActo
             GetWorld()->GetTimerManager().SetTimer(Timer, this, &ABarril::destruirBarril, 3.F, false);
         }
     }
-    if (OtherActor != this && (OtherActor->IsA(AMuro::StaticClass()) || OtherActor->IsA(ADonkeyKong_USFXCharacter::StaticClass())) && unaExplosion == 0) {
+    if (OtherActor != this && (OtherActor->IsA(AMuro::StaticClass()) || (OtherActor->IsA(ADonkeyKong_USFXCharacter::StaticClass())) && unaExplosion == 0)) {
 		unaExplosion = 1;
-        ParticleSystem->SetWorldLocation(GetActorLocation());  // Ubicar las partículas
-        ParticleSystem->Activate(true);  // Activar las partícula
+        ParticleSystem->SetWorldLocation(GetActorLocation());
+        ParticleSystem->Activate(true);
     }
 }
 

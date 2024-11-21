@@ -6,6 +6,7 @@
 #include "Enemigos.h"
 #include "ISuscriptor.h" //observer
 #include "ITransfromar.h" //observer
+#include "IState.h" //state
 #include "EnemigoDragon.generated.h"
 
 UCLASS()
@@ -45,4 +46,23 @@ public:
 	void  Actualizar() override;
 	void Transformar() override;
 	void cancelar();
+
+	//Patron State
+private:
+	IIState* EstadoPasivo;
+	IIState* EstadoAgresivo;
+	IIState* Estado;
+	int energia = 0;
+
+public:
+	void InicializarEnemigo(int _energia);
+	void EstablecerEstado(IIState* _estado);	
+	void Ataque();
+	void Moverse();
+	FORCEINLINE int GetEnergia() { return energia; }
+	FORCEINLINE FString GetEstadoActual() { return "El estado actual del Dragon es " + Estado->GetEstado(); }
+	FORCEINLINE IIState* GetEstadoPasivo() { return EstadoPasivo; }
+	FORCEINLINE IIState* GetEstadoAgresivo() { return EstadoAgresivo; }
+	FORCEINLINE void RecuperarEnergia() { energia += 7; };
+	FORCEINLINE void PerderEnergia() { energia -= 2; };
 };

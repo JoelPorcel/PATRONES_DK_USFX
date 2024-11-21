@@ -63,14 +63,7 @@ void AMono::SpawnProyectil()
 		// Obtener la ubicaci?n y rotaci?n del jugador
 		FVector SpawnLocation = GetActorLocation() + FVector(0,-200,0); // Ajustar la distancia de spawn
 		FRotator SpawnRotation = GetActorRotation();
-
-		// Par?metros de spawn
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = this;
-		SpawnParams.Instigator = GetInstigator();
-		// Spawnear el proyectil
-		FVector ForwardDirection = FVector(0.0f, -1.f, 0.0f);
-		ABarril* SpawnedProjectile1 = GetWorld()->SpawnActor<ABarril>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);
+		ABarril* SpawnedProjectile1 = GetWorld()->SpawnActor<ABarril>(ProjectileClass, SpawnLocation, SpawnRotation);
 	/*	ForwardDirection = FVector(0.0f, -1.f, 0.0f);
 		ABarril* SpawnedProjectile2 = GetWorld()->SpawnActor<ABarril>(ProjectileClass, SpawnLocation, SpawnRotation, SpawnParams);*/
 	}
